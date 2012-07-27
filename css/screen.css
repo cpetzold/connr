@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  /*background: #eee;*/
+  color: #444;
+  font-family: Helvetica, sans-serif;
+}
+
+a, i, img {
+  text-decoration: none;
+  color: #222;
+  -webkit-transition: all ease 0.4s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+pre {
+  margin: 1em 0 0;
+}
+
+h1, h2, ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  height: 75px;
+  margin: 30px 30px 0 0;
+  padding: 5px 20px 5px;
+  background: #FF4242;
+  font: 48px Exo, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 2px;
+  color: #fff;
+  border-right: 1px solid #e3200f;
+  border-bottom: 3px solid #e3200f;
+  text-shadow: -1px -2px 0px #e3200f;
+  border-radius: 0 3px 3px 0;
+}
+
+h1 em {
+  font-style: normal;
+  color: #F0F2EB;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+#content {
+  padding: 30px;
+}
+
+.tile {
+  float: left;
+  width: 430px;
+  background: #fff;
+  margin: 15px;
+  padding: 0px;
+  border-radius: 3px;
+}
+
+.block {
+  position: relative;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background: #F0F2EB;
+  border-right: 1px solid #ddd;
+  border-bottom: 3px solid #ddd;
+  border-radius: 3px;
+  -webkit-transition: background ease 0.4s, border ease 0.4s;
+}
+
+.block:hover {
+  background: #e4e4e4;
+  border-color: #aaa;
+}
+
+.block p {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 8px 0;
+  color: #888;
+}
+
+.block .icon-github-sign {
+  font-size: 32px;
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  color: #fff;
+  text-shadow: -1px -2px 0px #ddd;
+}
+
+.block:hover .icon-github-sign {
+  text-shadow: -1px -2px 0px #aaa; 
+}
+
+.block .icon-external-link {
+  font-size: 0.6em;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.block img {
+  width: 100%;
+}
+
+.graphic {
+  z-index: 999;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 100px;
+}
+
+.graphic:hover {
+  height: 300px;
+  opacity: 1;
+}
+
+.graphic:hover img {
+  top: 0 !important;
+}
+
+.graphic img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.pics .wrapper {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.pics img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.me img {
+  top: -100px;
+}
+
+.cosmo img {
+  top: -30px;
+}

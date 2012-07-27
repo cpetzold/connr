@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Conner Petzold</title>
+    <link href="http://fonts.googleapis.com/css?family=Exo" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
+    <link href="css/dark.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Conner <em>Petzold</em></h1>
+    <!-- <h2>Software Developer</h2> -->
+
+    <div id="content">
+      <div class="tile">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <div class="block">
+              <i class="icon-github-sign"></i>
+              <a href="https://github.com/cpetzold/owl" target="_blank">
+                <strong>OWL</strong> — NodeJS blogging engine
+              </a>
+              <i class="icon-external-link"></i>
+              <br>
+              <p>
+                OWL (<strong>O</strong>WL <strong>W</strong>atches <strong>L</strong>etters) is a simple node.js blogging engine backed by <a href="http://www.mongodb.org/" target="_blank">MongoDB</a> and the file system. It was heavily influenced by <a href="https://github.com/ProjectMoon/reed" target="_blank">reed</a>.
+              </p>
+              <pre><code class="javascript">var owl = require('owl');
+
+var blog = owl.createBlog({
+    posts: './posts'
+  , pages: './pages'
+  , mongo: 'mongodb://localhost/blog'
+  , debug: false
+});</code></pre>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <i class="icon-github-sign"></i>
+              <a href="https://github.com/cpetzold/termite" target="_blank">
+                <strong>Termite</strong> — NodeJS http/udp bittorrent tracker
+              </a>
+              <i class="icon-external-link"></i>
+              <br>
+              <p>
+                Termite (<strong>t</strong>ermite <strong>e</strong>ncourages <strong>r</strong>eal <strong>m</strong>easures <strong>i</strong>n <strong>t</strong>racking <strong>e</strong>fficiency) is a fully configurable bittorrent tracker that implements both the http (<a href="http://www.bittorrent.org/beps/bep_0003.html" target="_blank">BEP 0003</a>) and udp (<a href="http://www.bittorrent.org/beps/bep_0015.html" target="_blank">BEP 0015</a>) bittorrent protocols.
+              </p>
+              <pre><code class="javascript">var termite = require('termite');
+
+var tracker = termite.createTracker({
+    redis: { host: '127.0.0.1', port: 6379 }
+  , http: { port: 8080 }
+  , udp: { port: 8081 }
+});
+
+tracker.listen();
+</code></pre>
+            </a>
+          </li>
+          <li>
+            <div class="block">
+              <i class="icon-github-sign"></i>
+              <a href="https://github.com/cpetzold/platbot" target="_blank">
+                <strong>Platbot</strong> — C++ 2D platform game
+              </a>
+              <i class="icon-external-link"></i>
+              <br>
+              <p>
+                Exploration of 2D game development in C++. It was initially built on <a href="http://www.sfml-dev.org/" target="_blank">SFML</a>, which was later switched out in favor of <a href="http://www.libgosu.org/" target="_blank">Gosu</a>.
+              </p>
+              <img src="https://github.com/cpetzold/platbot/raw/master/concepts/cel.png" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tile" id="graphics">
+        <h2>Graphics</h2>
+        <ul>
+          <li>
+            <a class="graphic" href="http://dribbble.com/shots/412559-OWL" target="_blank">
+              <img style="top: -80px;" src="http://dribbble.s3.amazonaws.com/users/36649/screenshots/412559/owl.gif" />
+            </a>
+          </li>
+          <li>
+            <a class="graphic" href="http://dribbble.com/shots/504819-B" target="_blank">
+              <img style="top: -70px;" src="http://dribbble.s3.amazonaws.com/users/36649/screenshots/504819/benchwise.png" />
+            </a>
+          </li>
+          <li>
+            <a class="graphic" href="http://dribbble.com/shots/470327-Meteoric-Icon" target="_blank">
+              <img style="top: -110px;" src="http://dribbble.s3.amazonaws.com/users/36649/screenshots/470327/icon-dribble.png" />
+            </a>
+          </li>
+          <li>
+            <a class="graphic" href="http://dribbble.com/shots/235689-" target="_blank">
+              <img style="top: -10px;" src="http://dribbble.s3.amazonaws.com/users/36649/screenshots/235689/screen_shot_2011-08-11_at_10.38.22_pm.png" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tile">
+        <h2>About Me</h2>
+        <div class="pics">
+          <div class="wrapper me">
+            <img src="http://sphotos-a.xx.fbcdn.net/hphotos-ash3/149661_791055845773_4540573_n.jpg" />
+          </div>
+          <div class="wrapper cosmo">
+            <img src="http://distilleryimage0.s3.amazonaws.com/da53d7d6ca0c11e1be6a12313820455d_7.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="tile">
+        <h2>Work</h2>
+        <ul>
+          <li>Something</li>
+          <li>Something else</li>
+        </ul>
+      </div>
+    </div>
+    
+    <script src="js/highlight.pack.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/jquery.masonry.min.js"></script>
+    <script>
+      $(function() {
+
+        hljs.tabReplace = '  ';
+        hljs.initHighlightingOnLoad();
+
+        setTimeout(function() {
+          $('#content').masonry({
+            itemSelector: '.tile'
+          });
+        }, 500);
+
+      });
+    </script>
+  </body>
+</html>
