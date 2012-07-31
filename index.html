@@ -8,16 +8,68 @@
     <link href="css/dark.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Conner <em>Petzold</em></h1>
-    <!-- <h2>Software Developer</h2> -->
-
     <div id="content">
+
+      <div id="head">
+        <h1>Conner <em>Petzold</em></h1>
+        <!-- <h2>Software Developer</h2> -->
+        <div class="social">
+          <a href="https://github.com/cpetzold" target="_blank"><i class="icon-github-sign"></i></a>
+          <a href="https://twitter.com/cpetzold" target="_blank"><i class="icon-twitter-sign"></i></a>
+          <a href="http://www.linkedin.com/in/cpetzold" target="_blank"><i class="icon-linkedin-sign"></i></a>
+          <a href="https://facebook.com/conner" target="_blank"><i class="icon-facebook-sign"></i></a>
+          <a href="mailto:cpetzold@gmail.com" target="_blank"><i class="icon-envelope-alt"></i></a>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+
+      <div class="tile">
+        <h2>About Me</h2>
+        <p>
+          I'm a 24 year old <strong>software engineer</strong> living in San Francisco with my girlfriend Caroline and dog Cosmo. I graduated in 2010 with a bachelors degree in <strong>Computer Science</strong> from Colorado State.
+        </p>
+        <p>
+          I currently work as an engineer at <a href="http://storify.com"><strong>Storify</strong></a>, and have been doing so since April of 2010. I work on the full stack of the web application and public API. Storify is a fairly traffic heavy <a href="http://nodejs.org" target="_blank"><strong>NodeJS</strong></a> application, so while new engineering problems are exciting and fun to tackle, the solutions aren't always as straight forward because of the relative infancy of the technology.
+        </p>
+        <p>
+          Before Storify, I worked as a front-end engineer at <a href="http://yahoo.com"><strong>Yahoo!</strong></a> for over a year, working on an internal advertiser analytics application. The application I worked on used <strong>PHP</strong> on the backend and served a <strong>YUI</strong> client rich with visualizations and large amounts of analytical data. 
+        </p>
+
+        <div class="pics">
+          <div class="wrapper caroline">
+            <img src="http://sphotos-a.xx.fbcdn.net/hphotos-ash3/s720x720/540538_639426312480_1577217756_n.jpg" />
+          </div>
+          <div class="wrapper me">
+            <img src="http://sphotos-a.xx.fbcdn.net/hphotos-ash3/149661_791055845773_4540573_n.jpg" />
+          </div>
+          <div class="wrapper cosmo">
+            <img src="http://distilleryimage0.s3.amazonaws.com/da53d7d6ca0c11e1be6a12313820455d_7.jpg" />
+          </div>
+        </div>
+
+        <div class="clear"></div>
+      </div>
+
+      <!-- <div class="tile">
+        <h2>Work</h2>
+        <ul>
+          <li>
+            <h3>Storify</h3>
+            <small>April 2010 - <em>current</em></small>
+          </li>
+          <li>
+
+          </li>
+        </ul>
+      </div> -->
+
       <div class="tile">
         <h2>Projects</h2>
         <ul>
           <li>
             <div class="block">
-              <i class="icon-github-sign"></i>
+              <i class="icon-github"></i>
               <a href="https://github.com/cpetzold/owl" target="_blank">
                 <strong>OWL</strong> — NodeJS blogging engine
               </a>
@@ -38,7 +90,7 @@ var blog = owl.createBlog({
           </li>
           <li>
             <div class="block">
-              <i class="icon-github-sign"></i>
+              <i class="icon-github"></i>
               <a href="https://github.com/cpetzold/termite" target="_blank">
                 <strong>Termite</strong> — NodeJS http/udp bittorrent tracker
               </a>
@@ -57,11 +109,11 @@ var tracker = termite.createTracker({
 
 tracker.listen();
 </code></pre>
-            </a>
+            </div>
           </li>
           <li>
             <div class="block">
-              <i class="icon-github-sign"></i>
+              <i class="icon-github"></i>
               <a href="https://github.com/cpetzold/platbot" target="_blank">
                 <strong>Platbot</strong> — C++ 2D platform game
               </a>
@@ -71,7 +123,7 @@ tracker.listen();
                 Exploration of 2D game development in C++. It was initially built on <a href="http://www.sfml-dev.org/" target="_blank">SFML</a>, which was later switched out in favor of <a href="http://www.libgosu.org/" target="_blank">Gosu</a>.
               </p>
               <img src="https://github.com/cpetzold/platbot/raw/master/concepts/cel.png" />
-            </a>
+            </div>
           </li>
         </ul>
       </div>
@@ -100,45 +152,17 @@ tracker.listen();
             </a>
           </li>
         </ul>
+        <div class="clear"></div>
       </div>
 
-      <div class="tile">
-        <h2>About Me</h2>
-        <div class="pics">
-          <div class="wrapper me">
-            <img src="http://sphotos-a.xx.fbcdn.net/hphotos-ash3/149661_791055845773_4540573_n.jpg" />
-          </div>
-          <div class="wrapper cosmo">
-            <img src="http://distilleryimage0.s3.amazonaws.com/da53d7d6ca0c11e1be6a12313820455d_7.jpg" />
-          </div>
-        </div>
-      </div>
-
-      <div class="tile">
-        <h2>Work</h2>
-        <ul>
-          <li>Something</li>
-          <li>Something else</li>
-        </ul>
-      </div>
     </div>
     
     <script src="js/highlight.pack.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="js/jquery.masonry.min.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/jquery.masonry.min.js"></script>-->
     <script>
-      $(function() {
-
-        hljs.tabReplace = '  ';
-        hljs.initHighlightingOnLoad();
-
-        setTimeout(function() {
-          $('#content').masonry({
-            itemSelector: '.tile'
-          });
-        }, 500);
-
-      });
+      hljs.tabReplace = '  ';
+      hljs.initHighlightingOnLoad();
     </script>
   </body>
 </html>

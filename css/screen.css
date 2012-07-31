@@ -7,12 +7,22 @@ body {
   /*background: #eee;*/
   color: #444;
   font-family: Helvetica, sans-serif;
+  padding-bottom: 20px;
+}
+
+p {
+  font-size: 13px;
+  line-height: 19px;
+  margin: 0;
 }
 
 a, i, img {
   text-decoration: none;
-  color: #222;
   -webkit-transition: all ease 0.4s;
+}
+
+a {
+  color: #222;
 }
 
 a:hover {
@@ -31,45 +41,72 @@ pre {
   margin: 1em 0 0;
 }
 
-h1, h2, ul {
+p {
+  margin: 0 0 1em;
+}
+
+h1, h2, h3, ul {
   margin: 0;
   padding: 0;
 }
 
+#head {
+  margin: 0 -10px 10px;
+}
+
 h1 {
-  height: 75px;
-  margin: 30px 30px 0 0;
-  padding: 5px 20px 5px;
-  background: #FF4242;
-  font: 48px Exo, Helvetica, sans-serif;
+  float: left;
+  margin: 2px 0 10px;
+  padding: 3px 10px;
+  font: 32px Exo, Helvetica, sans-serif;
   text-transform: uppercase;
-  text-align: right;
   letter-spacing: 2px;
-  color: #fff;
-  border-right: 1px solid #e3200f;
-  border-bottom: 3px solid #e3200f;
-  text-shadow: -1px -2px 0px #e3200f;
-  border-radius: 0 3px 3px 0;
+  color: #574D4F;
+  background: #fff7dc;
+  text-shadow: 0 2px 0px #fff;
 }
 
 h1 em {
   font-style: normal;
-  color: #F0F2EB;
+  color: #969091;
+}
+
+.social {
+  float: right;
+  font-size: 36px;
+  margin: 7px 0 0 0;
+}
+
+.social a {
+  margin-left: 4px;
+  color: #ddd;
+  text-shadow: 0 -1px 0 #aaa;
+}
+
+.social a:hover {
+  text-decoration: none;
+  color: #bbb;
+  text-shadow: 0 -1px 0 #444;
 }
 
 h2 {
+  font-size: 19px;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
+h3 {
+  font-size: 14px;
+}
+
 #content {
-  padding: 30px;
+  padding: 15px;
+  margin: 0 auto;
+  width: 600px;
 }
 
 .tile {
-  float: left;
-  width: 430px;
-  background: #fff;
-  margin: 15px;
+  margin: 0 0 20px;
   padding: 0px;
   border-radius: 3px;
 }
@@ -77,10 +114,9 @@ h2 {
 .block {
   position: relative;
   display: block;
-  margin: 10px 0;
+  margin: 10px 0 20px;
   padding: 10px;
   background: #F0F2EB;
-  border-right: 1px solid #ddd;
   border-bottom: 3px solid #ddd;
   border-radius: 3px;
   -webkit-transition: background ease 0.4s, border ease 0.4s;
@@ -98,11 +134,11 @@ h2 {
   color: #888;
 }
 
-.block .icon-github-sign {
-  font-size: 32px;
+.block .icon-github {
+  font-size: 24px;
   position: absolute;
-  top: 3px;
-  right: 0px;
+  top: 6px;
+  right: 3px;
   color: #fff;
   text-shadow: -1px -2px 0px #ddd;
 }
@@ -122,34 +158,21 @@ h2 {
 }
 
 .graphic {
-  z-index: 999;
-  position: relative;
   display: block;
   overflow: hidden;
-  height: 100px;
-}
-
-.graphic:hover {
-  height: 300px;
-  opacity: 1;
-}
-
-.graphic:hover img {
-  top: 0 !important;
+  width: 50%;
+  float: left;
 }
 
 .graphic img {
-  display: block;
-  position: absolute;
   width: 100%;
-  left: 0;
 }
 
 .pics .wrapper {
   position: relative;
   float: left;
-  width: 50%;
-  height: 150px;
+  width: 33.34%;
+  height: 140px;
   overflow: hidden;
 }
 
@@ -160,10 +183,22 @@ h2 {
   left: 0;
 }
 
+.me {
+  border: 4px solid #fff;
+}
+
 .me img {
-  top: -100px;
+  top: -92px;
 }
 
 .cosmo img {
-  top: -30px;
+  top: -16px;
+}
+
+.caroline img {
+  top: -60px;
+}
+
+.clear {
+  clear: both;
 }
