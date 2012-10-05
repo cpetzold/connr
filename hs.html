@@ -98,6 +98,9 @@
       .k10 { left: 71.43%; }
 
     </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/plax.js"></script>
   </head>
   <body>
 
@@ -131,7 +134,17 @@
 
     </div>
 
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <!--<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>-->
+    <script>
+      $(function() {
 
+        $('.m-greensm, .m-greenlg').plaxify({ xRange: 40, yRange: 40 });
+        $('.kb-key').plaxify({ xRange: 20, yRange: 20 });
+        $('.m-inside').plaxify({ xRange: 20, yRange: 20 });
+        $('.m-outer-border, .m-stand, .kb-top, .kb-back').plaxify({ xRange: 40, yRange: 40, invert: true });
+
+        $.plax.enable();
+      });
+    </script>
   </body>
 </html>
